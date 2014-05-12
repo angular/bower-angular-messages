@@ -1,0 +1,2 @@
+bower-angular-messages
+======================
