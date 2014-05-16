@@ -1,0 +1,8 @@
+{
+  "name": "angular-messages",
+  "version": "0.0.0",
+  "main": "./angular-messages.js",
+  "dependencies": {
+    "angular": "0.0.0"
+  }
+}
