@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.1-build.3452+sha.7fa6634
+ * @license AngularJS v1.3.1-build.3453+sha.ed3f799
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -376,8 +376,8 @@ angular.module('ngMessages', [])
         }
 
         ngMessages.registerMessage(index, {
-          type : $attrs.ngMessage || $attrs.when,
-          attach : function() {
+          type: $attrs.ngMessage || $attrs.when,
+          attach: function() {
             if (!element) {
               $transclude($scope, function(clone) {
                 $animate.enter(clone, null, $element);
@@ -385,7 +385,7 @@ angular.module('ngMessages', [])
               });
             }
           },
-          detach : function(now) {
+          detach: function(now) {
             if (element) {
               $animate.leave(element);
               element = null;
