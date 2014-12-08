@@ -1,9 +1,9 @@
 {
   "name": "angular-messages",
-  "version": "1.3.6-build.3680+sha.c5cba6e",
+  "version": "1.3.6-build.3681+sha.6ad109e",
   "main": "./angular-messages.js",
   "ignore": [],
   "dependencies": {
-    "angular": "1.3.6-build.3680+sha.c5cba6e"
+    "angular": "1.3.6-build.3681+sha.6ad109e"
   }
 }
