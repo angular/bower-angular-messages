@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.9-build.3765+sha.3353afb
+ * @license AngularJS v1.3.9-build.10+sha.26ee32e
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -385,7 +385,7 @@ angular.module('ngMessages', [])
               });
             }
           },
-          detach: function() {
+          detach: function(now) {
             if (element) {
               $animate.leave(element);
               element = null;
