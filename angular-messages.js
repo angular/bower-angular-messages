@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.3.9-build.3766+sha.b146cae
+ * @license AngularJS v1.3.9-build.3767+sha.5765061
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -114,7 +114,7 @@
  *
  * Whenever the `ngMessages` directive contains one or more visible messages then the `.ng-active` CSS
  * class will be added to the element. The `.ng-inactive` CSS class will be applied when there are no
- * animations present. Therefore, CSS transitions and keyframes as well as JavaScript animations can
+ * messages present. Therefore, CSS transitions and keyframes as well as JavaScript animations can
  * hook into the animations whenever these classes are added/removed.
  *
  * Let's say that our HTML code for our messages container looks like so:
