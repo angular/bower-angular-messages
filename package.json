@@ -1,6 +1,6 @@
 {
   "name": "angular-messages",
-  "version": "1.4.0-build.3787+sha.2b64f6e",
+  "version": "1.4.0-build.3788+sha.b7117af",
   "description": "AngularJS module that provides enhanced support for displaying messages within templates",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
