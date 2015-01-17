@@ -1,6 +1,6 @@
 /**
- * @license AngularJS v1.3.10-build.22+sha.13edaa9
- * (c) 2010-2014 Google, Inc. http://angularjs.org
+ * @license AngularJS v1.3.10-build.7+sha.1f9da20
+ * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
  */
 (function(window, angular, undefined) {'use strict';
@@ -178,7 +178,7 @@ angular.module('ngMessages', [])
     * at a time and this depends on the prioritization of the messages within the template. (This can
     * be changed by using the ng-messages-multiple on the directive container.)
     *
-    * A remote template can also be used to promote message reusability and messages can also be
+    * A remote template can also be used to promote message reuseability and messages can also be
     * overridden.
     *
     * {@link module:ngMessages Click here} to learn more about `ngMessages` and `ngMessage`.
