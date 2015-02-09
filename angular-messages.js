@@ -1,6 +1,6 @@
 /**
- * @license AngularJS v1.3.13
- * (c) 2010-2014 Google, Inc. http://angularjs.org
+ * @license AngularJS v1.4.0-beta.4
+ * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
  */
 (function(window, angular, undefined) {'use strict';
@@ -75,7 +75,7 @@
  *
  * However, including generic messages may not be useful enough to match all input fields, therefore,
  * `ngMessages` provides the ability to override messages defined in the remote template by redefining
- * then within the directive container.
+ * them within the directive container.
  *
  * ```html
  * <!-- a generic template of error messages known as "my-custom-messages" -->
@@ -114,7 +114,7 @@
  *
  * Whenever the `ngMessages` directive contains one or more visible messages then the `.ng-active` CSS
  * class will be added to the element. The `.ng-inactive` CSS class will be applied when there are no
- * animations present. Therefore, CSS transitions and keyframes as well as JavaScript animations can
+ * messages present. Therefore, CSS transitions and keyframes as well as JavaScript animations can
  * hook into the animations whenever these classes are added/removed.
  *
  * Let's say that our HTML code for our messages container looks like so:
@@ -385,7 +385,7 @@ angular.module('ngMessages', [])
               });
             }
           },
-          detach: function(now) {
+          detach: function() {
             if (element) {
               $animate.leave(element);
               element = null;
