@@ -1,6 +1,6 @@
 {
   "name": "angular-messages",
-  "version": "1.4.0-build.3834+sha.75725b4",
+  "version": "1.4.0-build.3835+sha.f627233",
   "description": "AngularJS module that provides enhanced support for displaying messages within templates",
   "main": "angular-messages.js",
   "scripts": {
