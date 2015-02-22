@@ -14,20 +14,11 @@ You can install this package either with `npm` or with `bower`.
 npm install angular-messages
 ```
 
-Add a `<script>` to your `index.html`:
-
-```html
-<script src="/node_modules/angular-messages/angular-messages.js"></script>
-```
-
 Then add `ngMessages` as a dependency for your app:
 
 ```javascript
-angular.module('myApp', ['ngMessages']);
+angular.module('myApp', [require('angular-messages')]);
 ```
-
-Note that this package is not in CommonJS format, so doing `require('angular-messages')` will
-return `undefined`.
 
 ### bower
 
