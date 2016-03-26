@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.5.3
+ * @license AngularJS v1.5.4-build.4699+sha.bd7d5f6
  * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -465,7 +465,7 @@ angular.module('ngMessages', [])
 
              // dive deeper into the DOM and examine its children for any ngMessage
              // comments that may be in an element that appears deeper in the list
-             if (prevNode.childNodes.length && parentLookup.indexOf(prevNode) == -1) {
+             if (prevNode.childNodes.length && parentLookup.indexOf(prevNode) === -1) {
                parentLookup.push(prevNode);
                prevNode = prevNode.childNodes[prevNode.childNodes.length - 1];
              } else if (prevNode.previousSibling) {
