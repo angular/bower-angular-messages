@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/angular/angular.js/issues"
   },
-  "homepage": "http://angularjs.org"
+  "homepage": "http://angularjs.org",
+  "jspm": {
+    "shim": {
+      "angular-messages": {
+        "deps": ["angular"]
+      }
+    }
+  }
 }
