@@ -1,9 +1,9 @@
 /**
- * @license AngularJS v1.5.6-build.4834+sha.55b7f7d
- * (c) 2010-2016 Google, Inc. http://angularjs.org
+ * @license AngularJS v1.4.11
+ * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
  */
-(function(window, angular) {'use strict';
+(function(window, angular, undefined) {'use strict';
 
 /* jshint ignore:start */
 // this code is in the core, but not in angular-messages.js
@@ -465,7 +465,7 @@ angular.module('ngMessages', [])
 
              // dive deeper into the DOM and examine its children for any ngMessage
              // comments that may be in an element that appears deeper in the list
-             if (prevNode.childNodes.length && parentLookup.indexOf(prevNode) === -1) {
+             if (prevNode.childNodes.length && parentLookup.indexOf(prevNode) == -1) {
                parentLookup.push(prevNode);
                prevNode = prevNode.childNodes[prevNode.childNodes.length - 1];
              } else if (prevNode.previousSibling) {
@@ -555,16 +555,11 @@ angular.module('ngMessages', [])
        link: function($scope, element, attrs) {
          var src = attrs.ngMessagesInclude || attrs.src;
          $templateRequest(src).then(function(html) {
-           if ($scope.$$destroyed) return;
-
            $compile(html)($scope, function(contents) {
              element.after(contents);
 
              // the anchor is placed for debugging purposes
-             var comment = $compile.$$createComment ?
-                 $compile.$$createComment('ngMessagesInclude', src) :
-                 $document[0].createComment(' ngMessagesInclude: ' + src + ' ');
-             var anchor = jqLite(comment);
+             var anchor = jqLite($document[0].createComment(' ngMessagesInclude: ' + src + ' '));
              element.after(anchor);
 
              // we don't want to pollute the DOM anymore by keeping an empty directive element
@@ -607,14 +602,13 @@ angular.module('ngMessages', [])
     *
     * @param {expression} ngMessage|when a string value corresponding to the message key.
     */
-  .directive('ngMessage', ngMessageDirectiveFactory())
+  .directive('ngMessage', ngMessageDirectiveFactory('AE'))
 
 
    /**
     * @ngdoc directive
     * @name ngMessageExp
     * @restrict AE
-    * @priority 1
     * @scope
     *
     * @description
@@ -640,14 +634,13 @@ angular.module('ngMessages', [])
     *
     * @param {expression} ngMessageExp|whenExp an expression value corresponding to the message key.
     */
-  .directive('ngMessageExp', ngMessageDirectiveFactory());
+  .directive('ngMessageExp', ngMessageDirectiveFactory('A'));
 
-function ngMessageDirectiveFactory() {
+function ngMessageDirectiveFactory(restrict) {
   return ['$animate', function($animate) {
     return {
       restrict: 'AE',
       transclude: 'element',
-      priority: 1, // must run before ngBind, otherwise the text is set on the comment
       terminal: true,
       require: '^^ngMessages',
       link: function(scope, element, attrs, ngMessagesCtrl, $transclude) {
